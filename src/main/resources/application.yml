@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+management:
+  endpoints:
+    web:
+      basePath: /customPath
+      exposure:
+        include: "*"
+        exclude: threaddump, heapdump
+    shutdown:
+      enabled: true
+    caches:
+      enabled: false
+    jmx:
+      exposure:
+        include: "*"
+        exclude: threaddump, heapdump
